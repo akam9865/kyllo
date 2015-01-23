@@ -1,0 +1,12 @@
+development:
+  adapter: postgresql
+  database: trello_dev 
+  pool: 5
+  timeout: 5000
+
+
+test:
+  adapter: postgresql
+  database: trello_test 
+  pool: 5
+  timeout: 5000

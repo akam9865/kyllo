@@ -1,0 +1,1 @@
+Trello::Application.config.secret_key_base = 'd1a3e10eb964ee7d5b97cb21d62e9965ff5d2b9568c82c2dbe3b87383d0d24789f15d117796664f8d4244a8811cfab8e07e1ff20f38d2991680d43f1b513d51e'
