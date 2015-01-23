@@ -4,7 +4,7 @@ Trello::Application.routes.draw do
   resources :users
   resource :session
   
-  namespace :api, defaults: { format: :json } do
+  namespace :api do
     resources :boards, except: [:new, :edit]
     resources :lists, only: [:create, :update, :destroy]
     resources :cards, only: [:create, :update, :destroy, :show]
