@@ -1,0 +1,12 @@
+<h1>My Boards</h1>
+<ul>
+	<% boards.each(function (board) { %>
+		<a href="#/boards/<%= board.id %>"><li><%= board.escape("title") %></li></a>
+	<% }) %>
+</ul>
+
+<h3>New Board</h3>
+<form id="new-board">
+	<label>title <input name="board[title]" type='text'><label>
+	<input type="submit" value="Create Board">
+</form>

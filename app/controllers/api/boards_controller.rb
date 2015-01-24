@@ -11,8 +11,9 @@ module Api
     end
   
     def show
-      # @board = current_user.board.find(params[:id])
-      # hold off
+      @board = Board.includes(:members, lists: :cards).find(params[:id])
+      # needs cards still
+      render :show
     end
   
     def index
