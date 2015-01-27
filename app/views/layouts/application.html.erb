@@ -5,20 +5,36 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
 </head>
 <body>
+	
+	<div class="header">
+		
+		<div class="logo">
+			<i class="fa fa-trello"></i> Kylello
+		</div>
+		
+		<div class="header-info">
+		<% if signed_in? %>
 
+			<div class="name-box">
+				<%= current_user.email %>				
+			</div>
+			<!-- temporary logout option -->
+			<div id="logout">
+				<%= button_to "Sign out", session_url, method: :delete, class: 'signout-btn' %>
+			</div>
+			
+		<% end %>
+		</div>
+	</div>
 	
 	<%= yield %>
 	
-	<br>
-	<br>
-	<% if signed_in? %>
-		<%= current_user.email %>
-		<%= button_to "Sign out", session_url, method: :delete %>
-		
 
-	<% end %>
 
 </body>
 </html>

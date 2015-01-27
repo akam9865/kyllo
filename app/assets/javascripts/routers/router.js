@@ -15,10 +15,23 @@ Trello.Routers.Router = Backbone.Router.extend({
 			collection: Trello.Collections.boards
 		});
 		
-		this.$rootEl.html(index.render().$el)
+		this._swapView(index);
 	},
 	
 	boardShow: function (id) {
+		var board = new Trello.Models.Board({ id: id });
+		board.fetch();
+
+		var show = new Trello.Views.BoardShow({
+			model: board
+		});
 		
-	}
+		this._swapView(show);
+	},
+	
+  _swapView: function (view) {
+    this.currentView && this.currentView.remove();
+    this.currentView = view;
+    this.$rootEl.html(view.render().$el);
+  }
 });
