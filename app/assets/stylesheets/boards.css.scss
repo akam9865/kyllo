@@ -1,12 +1,14 @@
 .board-title {
 	margin: 16px 0 16px 15px;
-	color: white;
+	color: #f3f3f3;
 	text-size: 10pt;
+	font-weight: 600;
+	line-height: 30px;
 }
 
-#lists {
+#lists-plus-form {
 	width: auto;
-	height: 100px;
+	height: 200px;
 
 	overflow-x: scroll;
 	overflow-y: hidden;

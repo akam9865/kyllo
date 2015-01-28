@@ -10,7 +10,6 @@ class User < ActiveRecord::Base
   attr_reader :password
   after_initialize :ensure_session_token
   
-  
   def self.find_by_credentials(user_params)
     user = User.find_by_email(user_params[:email])
     user.try(:is_password?, user_params[:password]) ? user : nil
@@ -29,6 +28,10 @@ class User < ActiveRecord::Base
     self.session_token = SecureRandom.urlsafe_base64(16)
     self.save!
     self.session_token
+  end
+  
+  def set_initials
+    self.initials = self.firstname[0].upcase + self.lastname[0].upcase
   end
   
   protected

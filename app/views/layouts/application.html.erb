@@ -6,26 +6,42 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
+	<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 
 </head>
 <body>
 	
 	<div class="header">
+
+
+
+		<div class="header-boards">
+			<i class="fa fa-trello b-logo"></i>
+			Boards
+		</div>
+		
 		
 		<div class="logo">
-			<i class="fa fa-trello"></i> Kylello
+			<a id="logo-link" href="/"><i class="fa fa-trello"></i> Kylello</a>
 		</div>
 		
 		<div class="header-info">
 		<% if signed_in? %>
-
-			<div class="name-box">
-				<%= current_user.email %>				
-			</div>
-			<!-- temporary logout option -->
-			<div id="logout">
-				<%= button_to "Sign out", session_url, method: :delete, class: 'signout-btn' %>
+		
+			<div class="dropdown name-box">
+				<button class="drop-btn dropdown-toggle" type="button" id="logout-menu" data-toggle="dropdown">
+					<div class="btn-initials"><%= current_user.initials %></div>
+					<div class="btn-name"><%= current_user.firstname.capitalize + " " + current_user.lastname.capitalize %></div>
+				</button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="logout-menu">
+					<li class="dropdown-name" role="presentation">
+						<%= current_user.firstname.capitalize + ' ' + current_user.lastname.capitalize + ' (' + current_user.email + ')' %>
+					</li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation">
+						<%= link_to "Log Out", session_url, method: :delete, class: 'signout', role: 'menuitem' %>
+					</li>
+				</ul>
 			</div>
 			
 		<% end %>

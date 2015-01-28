@@ -16,6 +16,11 @@ Trello.Views.BoardShow = Backbone.CompositeView.extend({
 	
 	renderLists: function () {
 		this.model.lists().each(this.addList.bind(this));
+		this.$("#lists").sortable();
+	},
+	
+	renderNewForm: function () {
+		
 	},
 	
 	render: function () {
@@ -25,6 +30,7 @@ Trello.Views.BoardShow = Backbone.CompositeView.extend({
 		
 		this.$el.html(content);
 		this.renderLists();
+		
 		return this;
 	}
 });

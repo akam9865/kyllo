@@ -161,7 +161,7 @@ DEPENDENCIES
   bcrypt
   better_errors
   binding_of_caller
-  bootstrap-sass
+  bootstrap-sass (~> 3.3.3)
   coffee-rails (~> 4.0.0)
   font-awesome-rails
   jbuilder (~> 1.2)

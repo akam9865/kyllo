@@ -1,15 +1,18 @@
-
 .listShow {
-/*	float: left;*/
+	float: left;
 	height: 60px;
 	width: 254px;
 	background: #E3E3E3;
 	margin: 0 5px 0 5px;
 	padding: 4px 3px 3px 3px;
-	display: inline-block;
+/*	display: inline-block;*/
 	border-radius: 4px;
 }
 
-.listShow:first-child {
-	margin-left: 10px;
+#list-title {
+	color: #555555;
+	cursor: -webkit-grab;
+	font-weight: bold;
+	font-size: 15px;
+	margin: 3px 0 0 3px;
 }

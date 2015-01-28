@@ -1,10 +1,9 @@
-
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require jquery.serializejson
 //= require underscore
 //= require backbone
-//= require bootstrap
 //= require trello
 //= require_tree ../templates
 //= require_tree ./utils
