@@ -8,9 +8,50 @@
 
 #lists-plus-form {
 	width: auto;
-	height: 200px;
-
 	overflow-x: scroll;
 	overflow-y: hidden;
 	white-space: nowrap;
+	height: 100px;
+}
+
+a.board {
+	height: 100px;
+	width: 250px;
+	background: #0b6294;
+	color: #f6f6f6;
+	background-size: cover;
+	display: inline-block;
+	padding: 8px 12px 8px 12px;
+	margin: 0 16px 16px 0;
+	border-radius: 3px;
+	text-decoration: none;
+  transition: .2s;
+	position: relative;
+}
+
+a.board:hover {
+	text-decoration: none;
+	color: #f6f6f6;
+	background: #0A5783;
+}
+
+span.delete {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 9px;
+	height: 36px;
+	width: 36px;
+	font-size: 14px;
+	text-align: center;
+	transition: .2s;
+}
+
+a.board:hover span.delete {
+	display: inline;
+}
+
+span.delete:hover {
+	font-size: 20px;
 }

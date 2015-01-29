@@ -9,6 +9,12 @@ class Api::ListsController < ApplicationController
     end
   end
   
+  def destroy
+    @list = List.find(params[:id])
+    @list.destroy
+    render json: {}
+  end
+  
   private
 
   def current_board

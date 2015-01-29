@@ -1,9 +1,15 @@
 <h1>My Boards</h1>
-<ul>
+<div class="boards">
 	<% boards.each(function (board) { %>
-		<a href="#/boards/<%= board.id %>"><li><%= board.escape("title") %></li></a>
+		<a class="board" href="#/boards/<%= board.id %>">
+			<span class="title"><%= board.escape("title") %></span>
+			<span class="delete" data-id="<%= board.id %>">
+				<i class="fa fa-times"></i>
+			</span>
+		</a>
+		
 	<% }) %>
-</ul>
+</div>
 
 <h3>New Board</h3>
 <form id="new-board">

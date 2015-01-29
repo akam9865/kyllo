@@ -3,6 +3,20 @@ Trello.Views.ListShow = Backbone.CompositeView.extend({
 	
 	className: "listShow",
 	
+	events: {
+		"click span.list-delete": "destroy",
+		"submit .new-card-form": "createCard"
+	},
+	
+	createCard: function (event) {
+		event.preventDefault();
+		alert()
+	},
+	
+	destroy: function (event) {
+		this.model.destroy();
+	},
+	
 	initialize: function () {
 		this.listenTo(this.model, "sync", this.render);
 	},
