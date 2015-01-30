@@ -2,11 +2,14 @@
 <span class="list-delete"><i class="fa fa-chevron-circle-down"></i></span>
 
 
+<div id="cards">
+</div>
+
 
 <div class="add-card idle">
 	<form class="new-card-form">
 		<span class="card-placeholder">Add a card...</span>
-		<input type="text" class="card-title-input" name="card[title]" placeholder="Add a card...">
+		<input type="text" class="card-title-input" name="card[title]" placeholder="Add a card..." id="<%= list.id %>">
 		<div class="card-edit-controls">
 			<input type="submit" class="card-submit" value="Save">
 		</div>

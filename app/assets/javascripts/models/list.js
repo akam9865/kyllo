@@ -1,3 +1,16 @@
 Trello.Models.List = Backbone.Model.extend({
-	// will have parse and cards methods
+	cards: function () {
+		if (!this._cards) {
+			this._cards = new Trello.Collections.Cards([], { list: this });
+		}
+		return this._cards;
+	},
+	
+	parse: function (response) {
+		if (response.cards) {
+			this.cards().set(response.cards, { parse: true });
+			delete response.cards;
+		}
+		return response;
+	}	
 });
