@@ -12,7 +12,14 @@ Trello.Views.BoardShow = Backbone.CompositeView.extend({
 	events: {
 		"submit .new-list-form": "createList",
 		"click .add-list.idle": "removeIdle",
-		"click div.cancel": "addIdle"
+		"click div.cancel": "addIdle",
+		"sortstop": "saveOrds"
+	},
+	
+	saveOrds: function (event) {
+		var itemElements = this.$(".cardShow");
+		
+		console.log(itemElements)
 	},
 	
 	removeIdle: function () {
