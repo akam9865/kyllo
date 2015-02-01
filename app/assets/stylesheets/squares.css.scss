@@ -32,7 +32,7 @@
 
 .top-nums .number {
 	display: inline-block;
-	width: 9.3%;
+	width: 9.5%;
 	font-size: 50px;
 	text-align: center;
 
@@ -82,7 +82,9 @@
 }
 
 .blank {
-	height: 128px;
+/*	height: 128px;*/
+	height: 10%;
 	width: 120px;
+
 	float: left;
 }
