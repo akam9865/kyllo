@@ -1,6 +1,7 @@
 #squares {
 	height: 600px;
-	width: 1000px;
+/*	width: 1000px;*/
+	width: 89%;
 	background: white;
 	float: right;
 	text-align: center;
@@ -8,9 +9,11 @@
 
 .square {
 	height: 60px;
-	width: 100px;
+/*	width: 100px;*/
+	width: 10%;
 	border: 1px solid black;
 	float: left;
+	
 }
 
 .available {
@@ -29,9 +32,10 @@
 
 .top-nums .number {
 	display: inline-block;
-
+	width: 9.5%;
 	font-size: 50px;
-	margin-right: 70px;
+	text-align: center;
+
 }
 
 .top-nums .number:last-child {
@@ -42,7 +46,8 @@
 }
 
 .seattle {
-	width: 40px;
+/*	width: 40px;*/
+	width: 40%;
 	float: left;
 	margin-top: 350px;
 	transform: rotate(-90deg);
@@ -57,14 +62,15 @@
 }
 
 .top {
-	width: 960px;
+	width: 89%;
 	float: right;
 /*	text-align: center;*/
 }
 
 .side {
 	height: 600px;
-	width: 100px;
+/*	width: 100px;*/
+	width: 7%;
 	float: left;
 
 	margin-left: 20px;
