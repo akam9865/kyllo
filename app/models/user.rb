@@ -1,17 +1,18 @@
 class User < ActiveRecord::Base
-  validates :email, :session_token, presence: true
-  validates :password, length: { minimum: 5, allow_nil: true }
-  validates :email, uniqueness: true
+  validates :firstname, presence: true
+  validates :password, length: { minimum: 4, allow_nil: true }
+
   
   has_many :boards
   has_many :board_memberships
   has_many :card_assignments
+  has_many :squares
   
   attr_reader :password
   after_initialize :ensure_session_token
   
   def self.find_by_credentials(user_params)
-    user = User.find_by_email(user_params[:email])
+    user = User.find_by_firstname(user_params[:firstname])
     user.try(:is_password?, user_params[:password]) ? user : nil
   end
   

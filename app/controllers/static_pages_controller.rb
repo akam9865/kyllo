@@ -5,4 +5,7 @@ class StaticPagesController < ApplicationController
   def root
   end
   
+  
+  def squares
+  end
 end
