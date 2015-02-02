@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kyle Wins</title>
+  <title>Kyllo</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -31,11 +31,11 @@
 			<div class="dropdown name-box">
 				<button class="drop-btn dropdown-toggle" type="button" id="logout-menu" data-toggle="dropdown">
 					<div class="btn-initials"><%= current_user.initials %></div>
-					<div class="btn-name"><%= current_user.firstname.capitalize %></div>
+					<div class="btn-name"><%= current_user.firstname.capitalize + " " + current_user.lastname.capitalize %></div>
 				</button>
 				<ul class="dropdown-menu" role="menu" aria-labelledby="logout-menu">
 					<li class="dropdown-name" role="presentation">
-						<%= current_user.firstname.capitalize %> 
+						<%= current_user.firstname.capitalize + " " + current_user.lastname.capitalize %> 
 					</li>
 					
 					<li role="presentation" class="divider"></li>

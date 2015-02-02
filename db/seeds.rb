@@ -7,6 +7,3 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-100.times do
-  Square.create
-end
