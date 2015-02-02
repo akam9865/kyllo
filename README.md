@@ -1,3 +1,3 @@
-## A clone of the online organization tool Trello
+## A clone of the online organization tool [Trello](www.trello.com)
 
-Attempted copy of <a href="www.trello.com" target="_blank">Trello</a>. Start by making a board, then make lists on your boards, cards on your lists, and items on your cards. Check out the <a href="kyllo.herokuapp.com" target="_blank">live link!</a>
+Start by making a board, then make lists on your boards, cards on your lists, and items on your cards. Check out the [live link!](kyllo.herokuapp.com)
