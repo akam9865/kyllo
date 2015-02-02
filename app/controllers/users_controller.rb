@@ -5,8 +5,7 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(user_params)
-    # @user.set_initials
-
+    @user.set_initials
     
     if @user.save
       sign_in!(@user)

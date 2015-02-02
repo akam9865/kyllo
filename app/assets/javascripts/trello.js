@@ -4,8 +4,8 @@ window.Trello = {
 	Views: {},
 	Routers: {},
 	initialize: function () {
-    // new Trello.Routers.Router
-		new Trello.Routers.SquaresRouter
+    new Trello.Routers.Router
+
     Backbone.history.start();
 	}
 };

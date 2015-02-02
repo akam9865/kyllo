@@ -15,7 +15,7 @@
 
 
 
-		<!-- <div class="header-boards">
+		<div class="header-boards">
 			<i class="fa fa-trello b-logo"></i>
 			Boards
 		</div>
@@ -23,20 +23,19 @@
 
 		<div class="logo">
 			<a id="logo-link" href="/"><i class="fa fa-trello"></i> Kylello</a>
-		</div> -->
+		</div>
 		
 		<div class="header-info">
 		<% if signed_in? %>
 		
 			<div class="dropdown name-box">
 				<button class="drop-btn dropdown-toggle" type="button" id="logout-menu" data-toggle="dropdown">
-					<div class="btn-initials">dropdown</div>
+					<div class="btn-initials"><%= current_user.initials %></div>
 					<div class="btn-name"><%= current_user.firstname.capitalize %></div>
 				</button>
 				<ul class="dropdown-menu" role="menu" aria-labelledby="logout-menu">
 					<li class="dropdown-name" role="presentation">
 						<%= current_user.firstname.capitalize %> 
-						<%= (current_user.firstname === "Kyle") ? "" : "likes weiner" %>
 					</li>
 					
 					<li role="presentation" class="divider"></li>

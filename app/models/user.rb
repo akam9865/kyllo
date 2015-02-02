@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   after_initialize :ensure_session_token
   
   def self.find_by_credentials(user_params)
-    user = User.find_by_firstname(user_params[:firstname])
+    user = User.find_by_firstname(user_params[:email])
     user.try(:is_password?, user_params[:password]) ? user : nil
   end
   
