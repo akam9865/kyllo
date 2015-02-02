@@ -1,2 +1,0 @@
-class SquaresController < ApplicationController
-end

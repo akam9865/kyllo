@@ -5,7 +5,6 @@ window.Trello = {
 	Routers: {},
 	initialize: function () {
     new Trello.Routers.Router
-
     Backbone.history.start();
 	}
 };
