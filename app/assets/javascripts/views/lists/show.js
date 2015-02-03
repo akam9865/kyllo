@@ -5,7 +5,22 @@ Trello.Views.ListShow = Backbone.CompositeView.extend({
 	
 	events: {
 		"click span.list-delete": "destroy",
-		"submit .new-card-form": "createCard"
+		"submit .new-card-form": "createCard",
+		"sortstop": "saveOrds"
+	},
+	
+	saveOrds: function (event) {
+		var itemElements = this.$(".cardShow");
+		var collection = this.collection;
+		
+		itemElements.each(function(idx, el) {
+			var cardId = $(el).children('.card-details').data('card-id');
+			
+			var card = collection.get(cardId);
+			card.save({ord: idx});
+		});
+		
+		collection.sort();
 	},
 	
 	createCard: function (event) {

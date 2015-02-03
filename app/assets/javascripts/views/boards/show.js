@@ -17,9 +17,23 @@ Trello.Views.BoardShow = Backbone.CompositeView.extend({
 	},
 	
 	saveOrds: function (event) {
-		var itemElements = this.$(".cardShow");
+		var itemElements = this.$(".listShow");
+		var collection = this.collection;
 		
-		console.log(itemElements)
+		itemElements.each(function(idx, el) {
+			var listId = $(el).children('#list-title').data('list-id');
+			
+			var list = collection.get(listId);
+			list.save({ord: idx});
+		});
+		
+		collection.sort();
+		
+    var subviews = this.subviews("#lists");
+
+    subviews.sort(function(subview1, subview2) {
+      return subview1.model.get('ord') - subview2.model.get('ord');
+    });
 	},
 	
 	removeIdle: function () {

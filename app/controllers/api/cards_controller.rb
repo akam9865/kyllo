@@ -8,6 +8,14 @@ class Api::CardsController < ApplicationController
     end
   end
   
+  def update
+    @card = Card.find(params[:id])
+
+    if @card.update_attribute(:ord, card_params[:ord])
+      render json: @card
+    end
+  end
+  
   private
   
   def current_list
@@ -15,6 +23,6 @@ class Api::CardsController < ApplicationController
   end
   
   def card_params
-    params.require(:card).permit(:title, :list_id)
+    params.require(:card).permit(:title, :list_id, :ord)
   end
 end

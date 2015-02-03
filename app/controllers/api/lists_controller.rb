@@ -14,6 +14,14 @@ class Api::ListsController < ApplicationController
     render json: {}
   end
   
+  def update
+    @list = List.find(params[:id])
+
+    if @list.update_attribute(:ord, list_params[:ord])
+      render json: @list
+    end
+  end
+  
   private
 
   def current_board
@@ -21,6 +29,6 @@ class Api::ListsController < ApplicationController
   end
 
   def list_params
-    params.require(:list).permit(:board_id, :title)
+    params.require(:list).permit(:board_id, :title, :ord)
   end
 end

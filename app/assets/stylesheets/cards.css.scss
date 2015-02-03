@@ -22,3 +22,25 @@
   background:#fff;
 }
 
+#cards {
+	margin-top: 4px;
+	padding: 0 3px 0 3px;
+}
+
+.cardShow {
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	border-radius: 3px;
+	cursor: pointer;
+	margin-bottom: 5px;
+	max-width: 300px;
+	min-height: 20px;
+	position: relative;
+	z-index: 0;
+}
+
+.card-details {
+	padding: 6px 8px 4px;
+	position: relative;
+	z-index: 10;
+}
