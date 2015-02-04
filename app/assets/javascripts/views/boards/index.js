@@ -1,6 +1,8 @@
 Trello.Views.BoardsIndex = Backbone.View.extend({
 	template: JST["boards/index"],
 	
+	className: "boardsIndex",
+	
   initialize: function () {
     this.listenTo(this.collection, 'sync add', this.render);
 		$('body').addClass('index');
@@ -8,10 +10,23 @@ Trello.Views.BoardsIndex = Backbone.View.extend({
 	
 	events: {
 		"submit #new-board": "newBoard",
-		"click .delete": "here"
+		"click .delete": "deleteBoard",
+		"click .create": "addActive",
+		"click .lay": "removeActive"
 	},
 	
-	here: function (event) {
+	removeActive: function (ev) {
+		$("a.create-board").removeClass('active');
+		$('.lay').remove();
+	},
+	
+	addActive: function () {
+		this.$el.prepend($('<div class="lay">'));
+		$("a.create-board").addClass('active');
+		$('input#title').focus();
+	},
+	
+	deleteBoard: function (event) {
 		var id = $(event.currentTarget).data('id');
 		var board = this.collection.get(id);
 		
@@ -39,5 +54,6 @@ Trello.Views.BoardsIndex = Backbone.View.extend({
 		var boardDetails = $(event.currentTarget).serializeJSON();
 		
 		Trello.Collections.boards.create(boardDetails);
+		// navigate to board, need id
 	}
 });

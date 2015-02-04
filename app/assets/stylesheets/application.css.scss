@@ -23,6 +23,10 @@
 	font-family: helvetica;
 }
 
+html {
+	height: 100%;
+}
+
 .header {
 	height: 40px;
 	background: #0B6294;
@@ -31,10 +35,15 @@
 body {
 	margin: 0px;
 	background: #0E74AF;
+	height: 100%;
 }
 
 body.index {
 	background: white;
+}
+
+.container {
+	height: 100%;
 }
 
 .header-info {
@@ -68,6 +77,7 @@ a#logo-link:hover {
 
 #main {
 	padding-left: 10px;
+	height: 100%;
 }
 
 .header-boards {
@@ -155,4 +165,73 @@ div.btn-name {
 .dropdown-name {
 	text-align: center;
 	color: #8C8C8C;
+}
+
+.sign-form {
+	width: 40%;
+	left: 30%;
+	position: absolute;
+
+	padding: 10px;
+	border-radius: 3px;
+	margin-top: 100px;
+	font-family: Arial,sans-serif;
+}
+
+.form-control {
+	background: #f5f5f5;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: .4em;
+	max-width: 400px;
+	width: 80%;
+}
+
+.sign-title {
+	font-weight: bold;
+	font-family: Arial,sans-serif;
+	color: #4D4D4D;
+	margin-bottom: 30px;
+}
+
+.form-group label {
+	font-weight: 300;
+	color: #4D4D4D;
+	font-size: 20px;
+}
+
+input.form-control:hover {
+	border-color: #8e8e8e;
+}
+
+.sign-btn {
+	padding: 5px 20px 5px 20px;
+	height: 50px;
+	width: auto;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	background: linear-gradient(to bottom, #48b512 0, #3d990f 100%);
+	box-shadow: 0 2px 0 #4d4d4d;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	margin-right: 4px;
+	margin-bottom: 20px;
+}
+
+.sign-btn:hover {
+	background: #34820D;
+}
+
+.guest {
+	margin-top: 20px;
+	background: linear-gradient(to bottom, #1248B5 0, #0f3d99 100%);
+}
+
+.guest:hover {
+	color: white;
+	background: #0b2c6f;
 }

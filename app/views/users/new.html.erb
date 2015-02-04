@@ -1,30 +1,31 @@
-<h1>Sign Up</h1>
+<div class="sign-form">
+	<h1 class="sign-title">Create a Kyllo Account</h1>
 
-<form class="col-md-4" action="/users" method="post">
-	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<form  action="/users" method="post">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-	<div class="form-group">
-		<label for="firstname">User Name</label>
-		<input type="text" class="form-control" name="user[firstname]" id="firstname" placeholder="First Name">
-	</div>
+		<div class="form-group">
+			<label for="firstname">First Name</label>
+			<input type="text" class="form-control" name="user[firstname]" id="firstname" placeholder="First Name">
+		</div>
 	
-	<div class="form-group">
-		<label for="lastname">Last Name</label>
-		<input type="text" class="form-control" name="user[lastname]" id="lastname" placeholder="Last Name">
-	</div>
+		<div class="form-group">
+			<label for="lastname">Last Name</label>
+			<input type="text" class="form-control" name="user[lastname]" id="lastname" placeholder="Last Name">
+		</div>
 
-	<div class="form-group">
-		<label for="email">Email</label>
-		<input type="text" class="form-control" name="user[email]" id="email" placeholder="Email">
-	</div>
+		<div class="form-group">
+			<label for="email">Email</label>
+			<input type="text" class="form-control" name="user[email]" id="email" placeholder="Email">
+		</div>
 		
-	<div class="form-group">
-		<label for="password">Password</label>
-		<input type="password" class="form-control" name="user[password]" id="password" placeholder="Password">
-	</div>
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input type="password" class="form-control" name="user[password]" id="password" placeholder="Password">
+		</div>
 
-	<div class="form-group"><input class="form-control" type="submit" value="Submit" class="btn btn-primary"></div>
-</form>
+		<input class="sign-btn" type="submit" value="Create New Account" class="btn btn-primary">
+	</form>
 
-<a href="<%= new_session_url %>">or sign in</a>
-
+	Already have an account? <a href="<%= new_session_url %>">Log in.</a>
+</div>

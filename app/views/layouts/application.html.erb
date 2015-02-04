@@ -9,24 +9,20 @@
 	<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 
 </head>
-<body>
-	
+<body class="index">
+	<% if signed_in? %>
 	<div class="header">
-
-
-
 		<div class="header-boards">
 			<i class="fa fa-trello b-logo"></i>
 			Boards
 		</div>
-
 
 		<div class="logo">
 			<a id="logo-link" href="/"><i class="fa fa-trello"></i> Kylello</a>
 		</div>
 		
 		<div class="header-info">
-		<% if signed_in? %>
+		
 		
 			<div class="dropdown name-box">
 				<button class="drop-btn dropdown-toggle" type="button" id="logout-menu" data-toggle="dropdown">
@@ -45,10 +41,10 @@
 				</ul>
 			</div>
 			
-		<% end %>
 		</div>
 	</div>
 	
+	<% end %>
 	<%= yield %>
 	
 
