@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-guest = User.create({email: "example@gmail.com", firstname: "guest", lastname: "user", password: "password"})
+guest = User.create({email: "example@gmail.com", firstname: "guest", lastname: "user", password: "password", initials: "GU"})
 
 board = guest.boards.create({title: "Welcome Board"})
 
