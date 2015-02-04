@@ -9,10 +9,14 @@
 			<a ><%= card.collection.list.get('title') %></a>
 		</div>
 		
-		<div class="modal-description">
-			<h5>Description</h5>
+		<div class="modal-description idle">
 			
-			<%= card.escape('description') %>
+			<% if (card.get('description')) {%>
+				<h5 id="descrip">Description</h5>
+				<div class="description-text"><%= card.escape('description') %></div>
+			<% } else { %>
+				<div class="description-text">Click here to edit description.</div>
+			<% }; %>
 			
 			<form class="descrip-form">
 				<textarea class="descripy" name="card[description]"></textarea>

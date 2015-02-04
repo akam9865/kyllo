@@ -8,7 +8,14 @@ Trello.Views.CardModal = Backbone.CompositeView.extend({
 	events: {
 		"click #close": "dismiss",
 		"click #overlay": "dismiss",
-		"submit .descrip-form": "saveDescription"
+		"submit .descrip-form": "saveDescription",
+		"click .modal-description": "removeIdle"
+	},
+	
+	removeIdle: function (event) {
+		$(event.currentTarget).removeClass("idle");
+		$("textarea.descripy").val(this.model.get('description'));
+		$("textarea.descripy").focus()
 	},
 	
 	saveDescription: function (event) {
@@ -16,6 +23,7 @@ Trello.Views.CardModal = Backbone.CompositeView.extend({
 		var details = $(event.currentTarget).serializeJSON();
 		
 		this.model.save(details);
+		this.render();
 	},
 	
 	dismiss: function (event) {

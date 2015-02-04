@@ -100,3 +100,23 @@ textarea.descripy {
 	border-radius: 3px;
 	margin-right: 4px;
 }
+
+h5#descrip {
+	color: #8c8c8c;
+}
+
+.modal-description.idle .descrip-form {
+	display: none;
+}
+
+.modal-description .description-text {
+	display: none;
+}
+
+.modal-description.idle .description-text {
+	display: block;
+}
+
+.description-text {
+	margin-top: 15px;
+}
