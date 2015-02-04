@@ -31,5 +31,4 @@ Trello.Views.CardModal = Backbone.CompositeView.extend({
 		this.$el.html(content);
 		return this;
 	}
-	
 });

@@ -4,7 +4,7 @@ Trello.Views.BoardsIndex = Backbone.View.extend({
 	className: "boardsIndex",
 	
   initialize: function () {
-    this.listenTo(this.collection, 'sync add', this.render);
+    this.listenTo(this.collection, 'sync add remove', this.render);
 		$('body').addClass('index');
   },
 	
@@ -31,7 +31,7 @@ Trello.Views.BoardsIndex = Backbone.View.extend({
 		var board = this.collection.get(id);
 		
 		// this way sucks, fix it
-		
+
 		board.destroy({
 			success: function () {
 				Backbone.history.navigate('#', {trigger: true})

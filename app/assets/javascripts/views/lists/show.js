@@ -8,11 +8,26 @@ Trello.Views.ListShow = Backbone.CompositeView.extend({
 		"submit .new-card-form": "createCard",
 		"sortstop": "saveOrds",
 		"sortreceive": "receiveCard",
-		"sortremove": "removeCard"
+		"sortremove": "removeCard",
+		"click .add-card.idle": "removeIdle",
+		"click .lay": "addIdle"
 		// "sortstart": "test"
 	},
 	
 	test: function (event) {
+	},
+	
+	removeIdle: function (event) {
+		this.$el.prepend($('<div class="lay">'));
+		$(event.currentTarget).removeClass('idle');
+		$(event.currentTarget).addClass('active');
+		$('textarea').focus();
+	},
+	
+	addIdle: function (event) {
+		$('.lay').remove();
+		$('.add-card').removeClass('active');
+		$('.add-card').addClass('idle');
 	},
 	
 	saveOrds: function (event) {
@@ -71,8 +86,9 @@ Trello.Views.ListShow = Backbone.CompositeView.extend({
 
 		this.collection.create(cardDetails, {wait: true})
 		
-		$('input.card-title-input').val('');
-		$('input.card-title-input#' + this.model.id).focus();
+		$('textarea.card-title-input').val('');
+		$('textarea.card-title-input').focus();
+		// $('input.card-title-input#' + this.model.id).focus();
 	},
 	
 	addCard: function (card) {

@@ -11,9 +11,10 @@
 <div class="add-card idle">
 	<form class="new-card-form">
 		<span class="card-placeholder">Add a card...</span>
-		<input type="text" class="card-title-input" name="card[title]" placeholder="Add a card..." id="<%= list.id %>">
+		<!-- <input type="text" class="card-title-input" name="card[title]" placeholder="Add a card..." id="<%= list.id %>"> -->
+		<textarea id="<%= list.id %>" name="card[title]" class="card-title-input show-on-active"></textarea>
 		<div class="card-edit-controls">
-			<input type="submit" class="card-submit" value="Add">
+			<input type="submit" class="card-submit show-on-active" value="Add">
 		</div>
 	</form>
 </div>
