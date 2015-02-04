@@ -11,7 +11,7 @@ class Api::CardsController < ApplicationController
   def update
     @card = Card.find(params[:id])
 
-    if @card.update_attribute(:ord, card_params[:ord])
+    if @card.update_attributes(card_params)
       render json: @card
     end
   end
@@ -23,6 +23,6 @@ class Api::CardsController < ApplicationController
   end
   
   def card_params
-    params.require(:card).permit(:title, :list_id, :ord)
+    params.require(:card).permit(:title, :list_id, :ord, :description)
   end
 end

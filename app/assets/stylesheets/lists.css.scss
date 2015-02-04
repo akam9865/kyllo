@@ -136,3 +136,15 @@ input.list-submit:hover {
 .add-card:hover {
 	background: #C3C3C3;
 }
+
+.card-submit {
+	padding: 5px 20px 5px 20px;
+	height: 30px;
+	width: 72px;
+	color: white;
+	background: linear-gradient(to bottom,#48b512 0,#3d990f 100%);
+	box-shadow: 0 1px 0 #4d4d4d;
+	border: none;
+	border-radius: 3px;
+	margin-right: 4px;
+}

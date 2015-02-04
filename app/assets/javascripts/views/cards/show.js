@@ -9,7 +9,6 @@ Trello.Views.CardShow = Backbone.CompositeView.extend({
 	},
 	
 	showModal: function () {
-
 		this.modalView = this.modalView || 
 			new Trello.Views.CardModal({ model: this.model });
 			
