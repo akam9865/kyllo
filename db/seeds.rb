@@ -17,10 +17,11 @@ list3 = board.lists.create({title: "Coming Soon!"})
 
 card1 = list1.cards.create({title: "Welcome to Kyllo!"})
 card2 = list1.cards.create({title: "This is a card"})
-card3 = list1.cards.create({title: "Click on a card to see what's behind it"})
+card3 = list1.cards.create({title: "Click on a card to see what's behind it", description: "This is my description"})
 
 card4 = list2.cards.create({title: "Edit descriptions", description: "Enter and save a description below to change me."})
 card5 = list2.cards.create({title: "Make as many lists as you need", description: "Click \"Add List\" to access the new list form"})
+card6 = list2.cards.create({title: "Drag and Drop!", description: "Click and hold cards or lists to move them around. Example usage: move a card called \"mow the lawn\" from a list called \"To-Do!\" to a list called \"Finished\""})
 
-card6 = list3.cards.create({title: "Checklists", description: "Add items to your lists, and check them off as you work through your project"})
-card6 = list3.cards.create({title: "Use as many boards as you want", description: "Click the logo at the top center of the page to return to your boards page. Click \"Add Board\" to create more boards!"})
+card7 = list3.cards.create({title: "Checklists", description: "Add items to your lists, and check them off as you work through your project"})
+card8 = list3.cards.create({title: "Use as many boards as you want", description: "Click the logo at the top center of the page to return to your boards page. Click \"Add Board\" to create more boards!"})
