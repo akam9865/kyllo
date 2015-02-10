@@ -19,7 +19,7 @@
 			<% }; %>
 			
 			<form class="descrip-form">
-				<textarea class="descripy" name="card[description]"></textarea>
+				<textarea class="descripy" name="card[description]"><%= card.escape('description') %></textarea>
 				<input class="submit-descripy" type="submit" value="Save">
 			</form>
 		</div>

@@ -14,14 +14,17 @@ Trello.Views.CardModal = Backbone.CompositeView.extend({
 	
 	removeIdle: function (event) {
 		$(event.currentTarget).removeClass("idle");
-		$("textarea.descripy").val(this.model.get('description'));
-		$("textarea.descripy").focus()
+		
+		$("textarea.descripy").focus(function () {
+			this.select();
+		});
+		$("textarea.descripy").focus();
 	},
 	
 	saveDescription: function (event) {
 		event.preventDefault();
 		var details = $(event.currentTarget).serializeJSON();
-		
+	
 		this.model.save(details);
 		this.render();
 	},
