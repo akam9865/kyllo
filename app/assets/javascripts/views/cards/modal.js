@@ -15,9 +15,6 @@ Trello.Views.CardModal = Backbone.CompositeView.extend({
 	removeIdle: function (event) {
 		$(event.currentTarget).removeClass("idle");
 		
-		$("textarea.descripy").focus(function () {
-			this.select();
-		});
 		$("textarea.descripy").focus();
 	},
 	
