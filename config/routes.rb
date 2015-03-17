@@ -10,7 +10,5 @@ Trello::Application.routes.draw do
     resources :lists, only: [:create, :update, :destroy]
     resources :cards, only: [:create, :update, :destroy, :show]
     resources :items, only: [:create, :update, :destroy]
-    resources :squares
-    resources :users
   end
 end

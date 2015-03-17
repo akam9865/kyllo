@@ -10,3 +10,4 @@ test:
   database: trello_test 
   pool: 5
   timeout: 5000
+  
